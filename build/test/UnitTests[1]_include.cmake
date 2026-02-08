@@ -1,0 +1,5 @@
+if(EXISTS "/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests[1]_tests.cmake")
+  include("/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests[1]_tests.cmake")
+else()
+  add_test(UnitTests_NOT_BUILT UnitTests_NOT_BUILT)
+endif()

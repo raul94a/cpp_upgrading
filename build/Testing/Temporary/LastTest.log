@@ -1,0 +1,57 @@
+Start testing: Feb 08 12:30 CET
+----------------------------------------------------------
+1/2 Testing: TestEjemplo.IntArgReturnSameInt
+1/2 Test: TestEjemplo.IntArgReturnSameInt
+Command: "/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests" "--gtest_filter=TestEjemplo.IntArgReturnSameInt" "--gtest_also_run_disabled_tests"
+Directory: /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test
+"TestEjemplo.IntArgReturnSameInt" start time: Feb 08 12:30 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestEjemplo.IntArgReturnSameInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestEjemplo
+[ RUN      ] TestEjemplo.IntArgReturnSameInt
+[       OK ] TestEjemplo.IntArgReturnSameInt (0 ms)
+[----------] 1 test from TestEjemplo (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestEjemplo.IntArgReturnSameInt" end time: Feb 08 12:30 CET
+"TestEjemplo.IntArgReturnSameInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: TestEjemplo.IntArgReturnNotSameInt
+2/2 Test: TestEjemplo.IntArgReturnNotSameInt
+Command: "/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests" "--gtest_filter=TestEjemplo.IntArgReturnNotSameInt" "--gtest_also_run_disabled_tests"
+Directory: /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test
+"TestEjemplo.IntArgReturnNotSameInt" start time: Feb 08 12:30 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestEjemplo.IntArgReturnNotSameInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestEjemplo
+[ RUN      ] TestEjemplo.IntArgReturnNotSameInt
+[       OK ] TestEjemplo.IntArgReturnNotSameInt (0 ms)
+[----------] 1 test from TestEjemplo (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestEjemplo.IntArgReturnNotSameInt" end time: Feb 08 12:30 CET
+"TestEjemplo.IntArgReturnNotSameInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 08 12:30 CET

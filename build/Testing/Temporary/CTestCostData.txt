@@ -1,0 +1,3 @@
+TestEjemplo.IntArgReturnSameInt 4 0.00120404
+TestEjemplo.IntArgReturnNotSameInt 1 0.00450475
+---
