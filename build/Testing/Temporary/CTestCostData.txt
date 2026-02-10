@@ -1,7 +1,0 @@
-TestEjemplo.IntArgReturnSameInt 25 0.00024546
-TestEjemplo.IntArgReturnNotSameInt 22 0.000252078
-StoragedProduct.SetArguments 13 0.000394058
-StoragedProduct.CanRetireQuantity 14 0.000365542
-StoragedProduct.RetireQuantity 12 0.0003955
-StoragedProduct.UpdateProduct 10 0.000465171
----
