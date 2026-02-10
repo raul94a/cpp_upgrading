@@ -1,5 +1,5 @@
 {
-  "tests": 2,
+  "tests": 6,
   "name": "AllTests",
   "testsuites": [
     {
@@ -15,6 +15,32 @@
           "name": "IntArgReturnNotSameInt",
           "file": "\/Users\/raulalbin\/Desktop\/Desarrollo\/cpp\/almacen\/test\/test_test.cpp",
           "line": 11
+        }
+      ]
+    },
+    {
+      "name": "StoragedProduct",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "SetArguments",
+          "file": "\/Users\/raulalbin\/Desktop\/Desarrollo\/cpp\/almacen\/test\/models\/test_storaged_product.cpp",
+          "line": 20
+        },
+        {
+          "name": "CanRetireQuantity",
+          "file": "\/Users\/raulalbin\/Desktop\/Desarrollo\/cpp\/almacen\/test\/models\/test_storaged_product.cpp",
+          "line": 31
+        },
+        {
+          "name": "RetireQuantity",
+          "file": "\/Users\/raulalbin\/Desktop\/Desarrollo\/cpp\/almacen\/test\/models\/test_storaged_product.cpp",
+          "line": 40
+        },
+        {
+          "name": "UpdateProduct",
+          "file": "\/Users\/raulalbin\/Desktop\/Desarrollo\/cpp\/almacen\/test\/models\/test_storaged_product.cpp",
+          "line": 51
         }
       ]
     }

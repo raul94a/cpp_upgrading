@@ -86,20 +86,36 @@ test/CMakeFiles/UnitTests.dir/test_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/UnitTests.dir/test_test.cpp.s"
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/test_test.cpp -o CMakeFiles/UnitTests.dir/test_test.cpp.s
 
+test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o: test/CMakeFiles/UnitTests.dir/flags.make
+test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o: /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/models/test_storaged_product.cpp
+test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o: test/CMakeFiles/UnitTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o"
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o -MF CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o.d -o CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o -c /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/models/test_storaged_product.cpp
+
+test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.i"
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/models/test_storaged_product.cpp > CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.i
+
+test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.s"
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/models/test_storaged_product.cpp -o CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.s
+
 # Object files for target UnitTests
 UnitTests_OBJECTS = \
-"CMakeFiles/UnitTests.dir/test_test.cpp.o"
+"CMakeFiles/UnitTests.dir/test_test.cpp.o" \
+"CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o"
 
 # External object files for target UnitTests
 UnitTests_EXTERNAL_OBJECTS =
 
 test/UnitTests: test/CMakeFiles/UnitTests.dir/test_test.cpp.o
+test/UnitTests: test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o
 test/UnitTests: test/CMakeFiles/UnitTests.dir/build.make
 test/UnitTests: lib/libgtest_main.a
 test/UnitTests: src/libstorage.a
 test/UnitTests: lib/libgtest.a
 test/UnitTests: test/CMakeFiles/UnitTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable UnitTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable UnitTests"
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UnitTests.dir/link.txt --verbose=$(VERBOSE)
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test && /opt/homebrew/bin/cmake -D TEST_TARGET=UnitTests -D TEST_EXECUTABLE=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=UnitTests_TESTS -D CTEST_FILE=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake
 

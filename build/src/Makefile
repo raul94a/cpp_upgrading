@@ -185,6 +185,30 @@ storage/fast:
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/storage.dir/build.make src/CMakeFiles/storage.dir/build
 .PHONY : storage/fast
 
+models/product.o: models/product.cpp.o
+.PHONY : models/product.o
+
+# target to build an object file
+models/product.cpp.o:
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/storage.dir/build.make src/CMakeFiles/storage.dir/models/product.cpp.o
+.PHONY : models/product.cpp.o
+
+models/product.i: models/product.cpp.i
+.PHONY : models/product.i
+
+# target to preprocess a source file
+models/product.cpp.i:
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/storage.dir/build.make src/CMakeFiles/storage.dir/models/product.cpp.i
+.PHONY : models/product.cpp.i
+
+models/product.s: models/product.cpp.s
+.PHONY : models/product.s
+
+# target to generate assembly for a file
+models/product.cpp.s:
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/storage.dir/build.make src/CMakeFiles/storage.dir/models/product.cpp.s
+.PHONY : models/product.cpp.s
+
 test.o: test.cpp.o
 .PHONY : test.o
 
@@ -223,6 +247,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... storage"
+	@echo "... models/product.o"
+	@echo "... models/product.i"
+	@echo "... models/product.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/models/test_storaged_product.cpp" "test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o" "gcc" "test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o.d"
   "/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/test_test.cpp" "test/CMakeFiles/UnitTests.dir/test_test.cpp.o" "gcc" "test/CMakeFiles/UnitTests.dir/test_test.cpp.o.d"
   )
 

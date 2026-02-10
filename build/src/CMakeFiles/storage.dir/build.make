@@ -86,17 +86,33 @@ src/CMakeFiles/storage.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/storage.dir/test.cpp.s"
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/src/test.cpp -o CMakeFiles/storage.dir/test.cpp.s
 
+src/CMakeFiles/storage.dir/models/product.cpp.o: src/CMakeFiles/storage.dir/flags.make
+src/CMakeFiles/storage.dir/models/product.cpp.o: /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/src/models/product.cpp
+src/CMakeFiles/storage.dir/models/product.cpp.o: src/CMakeFiles/storage.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/storage.dir/models/product.cpp.o"
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/storage.dir/models/product.cpp.o -MF CMakeFiles/storage.dir/models/product.cpp.o.d -o CMakeFiles/storage.dir/models/product.cpp.o -c /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/src/models/product.cpp
+
+src/CMakeFiles/storage.dir/models/product.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/storage.dir/models/product.cpp.i"
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/src/models/product.cpp > CMakeFiles/storage.dir/models/product.cpp.i
+
+src/CMakeFiles/storage.dir/models/product.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/storage.dir/models/product.cpp.s"
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/src/models/product.cpp -o CMakeFiles/storage.dir/models/product.cpp.s
+
 # Object files for target storage
 storage_OBJECTS = \
-"CMakeFiles/storage.dir/test.cpp.o"
+"CMakeFiles/storage.dir/test.cpp.o" \
+"CMakeFiles/storage.dir/models/product.cpp.o"
 
 # External object files for target storage
 storage_EXTERNAL_OBJECTS =
 
 src/libstorage.a: src/CMakeFiles/storage.dir/test.cpp.o
+src/libstorage.a: src/CMakeFiles/storage.dir/models/product.cpp.o
 src/libstorage.a: src/CMakeFiles/storage.dir/build.make
 src/libstorage.a: src/CMakeFiles/storage.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libstorage.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libstorage.a"
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/src && $(CMAKE_COMMAND) -P CMakeFiles/storage.dir/cmake_clean_target.cmake
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/storage.dir/link.txt --verbose=$(VERBOSE)
 

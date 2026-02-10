@@ -185,6 +185,30 @@ UnitTests/fast:
 	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/UnitTests.dir/build.make test/CMakeFiles/UnitTests.dir/build
 .PHONY : UnitTests/fast
 
+models/test_storaged_product.o: models/test_storaged_product.cpp.o
+.PHONY : models/test_storaged_product.o
+
+# target to build an object file
+models/test_storaged_product.cpp.o:
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/UnitTests.dir/build.make test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.o
+.PHONY : models/test_storaged_product.cpp.o
+
+models/test_storaged_product.i: models/test_storaged_product.cpp.i
+.PHONY : models/test_storaged_product.i
+
+# target to preprocess a source file
+models/test_storaged_product.cpp.i:
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/UnitTests.dir/build.make test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.i
+.PHONY : models/test_storaged_product.cpp.i
+
+models/test_storaged_product.s: models/test_storaged_product.cpp.s
+.PHONY : models/test_storaged_product.s
+
+# target to generate assembly for a file
+models/test_storaged_product.cpp.s:
+	cd /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/UnitTests.dir/build.make test/CMakeFiles/UnitTests.dir/models/test_storaged_product.cpp.s
+.PHONY : models/test_storaged_product.cpp.s
+
 test_test.o: test_test.cpp.o
 .PHONY : test_test.o
 
@@ -223,6 +247,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... UnitTests"
+	@echo "... models/test_storaged_product.o"
+	@echo "... models/test_storaged_product.i"
+	@echo "... models/test_storaged_product.s"
 	@echo "... test_test.o"
 	@echo "... test_test.i"
 	@echo "... test_test.s"
