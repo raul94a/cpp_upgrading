@@ -2,10 +2,12 @@
 #include <string>
 #include "product.h" // Se encuentra automáticamente por herencia de Logic
 
-int EXPECTED_ID = 1;
-std::string EXPECTED_NAME = "pr1";
-double EXPECTED_PRICE = 10.0;
-int EXPECTED_QUANTITY = 10;
+
+#pragma once
+inline constexpr int EXPECTED_ID = 1;
+inline std::string EXPECTED_NAME = "pr1";
+inline constexpr double EXPECTED_PRICE = 10.0;
+inline constexpr int EXPECTED_QUANTITY = 10;
 
 StoragedProduct* _create_product(){
    
