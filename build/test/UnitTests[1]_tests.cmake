@@ -1,5 +1,0 @@
-add_test([=[TestEjemplo.IntArgReturnSameInt]=]  /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests [==[--gtest_filter=TestEjemplo.IntArgReturnSameInt]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TestEjemplo.IntArgReturnSameInt]=]  PROPERTIES DEF_SOURCE_LINE /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/test_test.cpp:4 WORKING_DIRECTORY /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[TestEjemplo.IntArgReturnNotSameInt]=]  /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test/UnitTests [==[--gtest_filter=TestEjemplo.IntArgReturnNotSameInt]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TestEjemplo.IntArgReturnNotSameInt]=]  PROPERTIES DEF_SOURCE_LINE /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/test/test_test.cpp:11 WORKING_DIRECTORY /Users/raulalbin/Desktop/Desarrollo/cpp/almacen/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  UnitTests_TESTS TestEjemplo.IntArgReturnSameInt TestEjemplo.IntArgReturnNotSameInt)
