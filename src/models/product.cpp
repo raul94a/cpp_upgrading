@@ -1,6 +1,8 @@
 #include "product.h"
 #include <string>
 #include <iostream>
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
 
 Product::Product(){}
 Product::Product(int id, std::string name, double price) : 
@@ -43,3 +45,23 @@ void StoragedProduct::update(StoragedProduct* ptr){
    this->quantity = ptr->quantity;
    std::cout << "Updating pointer " <<  this << " With " << ptr << std::endl;
 }
+
+void StoragedProduct::fromJson(const std::string& string) {
+    json data = json::parse(string);
+    this->id = data["id"];
+    this->name = data["name"];
+    this->price = data["price"];
+    this->quantity = data["quantity"];
+}
+
+std::string StoragedProduct::toJson() {
+    json j_object = {
+        {"id", this->id},
+        {"name", this->name},
+        {"price", this->price},
+        {"quantity", this->quantity}
+    };
+    return j_object.dump();
+}
+
+template class JsonSerializer<StoragedProduct>;

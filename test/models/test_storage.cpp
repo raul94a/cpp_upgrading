@@ -50,9 +50,7 @@ TEST(Storage,Sell) {
    EXPECT_NE(storageProductPtr,st.products.end());
    EXPECT_EQ(storageProductPtr->quantity,1);
    delete pr;
-   
-
-
-
 }
+
+
 

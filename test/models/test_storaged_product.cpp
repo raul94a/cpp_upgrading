@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include <string>
 #include "product.h" // Se encuentra automáticamente por herencia de Logic
-
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
 
 #pragma once
 inline constexpr int EXPECTED_ID = 1;
@@ -73,3 +74,24 @@ TEST(StoragedProduct,UpdateProduct) {
 
 }
 
+TEST(StoragedProduct, Serialization) {
+    StoragedProduct pr1 = *_create_product();
+    std::string jsonString = pr1.toJson();
+    
+
+    json json = json::parse(jsonString);
+    EXPECT_EQ(json["name"],"pr1");    
+
+}
+
+
+TEST(StoragedProduct, Deserialization) {
+    StoragedProduct pr1 = *_create_product();
+    std::string jsonString = pr1.toJson();
+    
+  
+    StoragedProduct pr2 = StoragedProduct();
+    pr2.fromJson(jsonString);
+
+    EXPECT_EQ(pr1.name,pr2.name);
+}
