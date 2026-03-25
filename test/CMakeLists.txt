@@ -1,6 +1,5 @@
 # Creamos el ejecutable de los tests
-add_executable(UnitTests test_test.cpp 
-                models/test_storaged_product.cpp 
+add_executable(UnitTests models/test_storaged_product.cpp 
                 models/test_storage.cpp 
                 persistence/test_file_persister.cpp
                 json/test_janson.cpp
