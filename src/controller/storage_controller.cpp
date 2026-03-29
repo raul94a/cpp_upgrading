@@ -1,5 +1,6 @@
 #include "controller.h"
 #include "product.h"
+#include <iostream>
 #include <nlohmann/json.hpp>
 using json = nlohmann::json;
 
@@ -10,15 +11,17 @@ controller::StorageController::StorageController(FilePersister persister){
 controller::StorageController::~StorageController(){
 
 }
-
+void controller::StorageController::add_storage(Storage storage) {
+    this->storages.push_back(storage);
+}
 // Devuelve el vector de storages
-std::vector<Product> controller::StorageController::get_all() {
-    return this->products;
+std::vector<Storage> controller::StorageController::get_all() {
+    return this->storages;
 }
 
 // Devuelve un storage específico por ID
-StoragedProduct controller::StorageController::get_storage(int id) {
-    return StoragedProduct(); 
+Storage controller::StorageController::get_storage(int id) {
+    return Storage(); 
 }
 
 
@@ -27,36 +30,41 @@ void controller::StorageController::save_storages() {
     std::string tail= "]";
     std::string data = "";
     data.append(header);
-    for(size_t i = 0; i < this->products.size(); ++i) {
+    std::cout << "Storages: " <<  this->storages.size() << std::endl;
+
+    for(size_t i = 0; i < this->storages.size(); ++i) {
         // Obtenemos referencia al producto
-        Product& product = this->products[i];
-        
+        Storage& storage = this->storages[i];
+        std::cout << "STORAGE OBTENIDO" << std::endl;
+
         // Hacemos el cast (asegúrate del virtual ~Product)
-        StoragedProduct& pr = dynamic_cast<StoragedProduct&>(product);
+        // Storage& pr = dynamic_cast<Storage&>(product);
         
-        data.append(pr.toJson());
+        data.append(storage.toJson());
         
         // Añadimos coma si no es el último elemento
-        if(i < this->products.size() - 1) {
+        if(i < this->storages.size() - 1) {
             data.append(",");
         }
     }
     data.append(tail);
-    this->persist.write("./data.json", data);
+    std::cout << data <<std::endl;
+    this->persist.write("./data.json", data,std::ios::out);
 }
 
 // Lee los datos desde el disco
-std::vector<Product*> controller::StorageController::read_storages() {
+std::vector<Storage> controller::StorageController::read_storages() {
     std::string data = this->persist.read("./data.json");
     if (data.empty()){
         return {};
     }
+    this->storages.clear();
     json parsed_data = json::parse(data);
-    std::vector<Product*> prs;
+    
     for(auto& el : parsed_data){
-       StoragedProduct* pr = new StoragedProduct();
-       pr->fromJson(el.dump());
-       prs.push_back(pr);
+       Storage storage = Storage();
+       storage.fromJson(el.dump());
+       this->storages.push_back(storage);
     }
-    return prs;
+    return this->storages;
 }

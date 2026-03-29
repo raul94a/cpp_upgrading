@@ -8,9 +8,9 @@ Product::Product(){}
 Product::Product(int id, std::string name, double price) : 
             name(name), id(id), price(price) {}
 
-Product::~Product(){
-    std::cout << "Destruyendo " << this << std::endl;
-}
+// Product::~Product(){
+//     std::cout << "Destruyendo " << this << std::endl;
+// }
 StoragedProduct::StoragedProduct() : Product() {}
 StoragedProduct::StoragedProduct(int id, std::string name, double price, int quantity) : Product(id,name,price) {
         this->quantity = quantity;

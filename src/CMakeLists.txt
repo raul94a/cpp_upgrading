@@ -1,5 +1,10 @@
 # Creamos una librería con la lógica del negocio para poder testearla después
-add_library(storage models/product.cpp models/storage.cpp persistence/file_persister.cpp)
+add_library(storage 
+                    models/product.cpp 
+                    models/storage.cpp 
+                    persistence/file_persister.cpp
+                    controller/storage_controller.cpp
+            )
 
 # Directorios de inclusión para que otros (como los tests) encuentren los .h
 target_include_directories(storage PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../include)

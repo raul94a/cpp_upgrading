@@ -11,14 +11,15 @@
         class StorageController {
             // we should define some mechanism to get the URI for read and write in disk.
             FilePersister persist;
-            std::vector<Product> products;
+            std::vector<Storage> storages;
             public:
                 StorageController(FilePersister persist);
                 ~StorageController();
-                std::vector<Product> get_all();
-                StoragedProduct get_storage(int id);
+                std::vector<Storage> get_all();
+                Storage get_storage(int id);
+                void add_storage(Storage pr);
                 void save_storages();
-                std::vector<Product*> read_storages();
+                std::vector<Storage> read_storages();
         };
         
     } // namespace controller

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ rm -rf build
 # 1. Configurar: Definimos origen (-S) y destino (-B) de forma explícita
 cmake -S . -B build
 
