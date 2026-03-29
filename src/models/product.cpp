@@ -28,7 +28,6 @@ bool StoragedProduct::can_retire(int qty){
 bool StoragedProduct::retire(int qty){
     if (can_retire(qty)){
         this->quantity -= qty;
-        //std::cout << "QTY: " << this->quantity <<std::endl;
         return true; 
     }
     return false;
