@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-class Storage {
+class Storage: JsonSerializer<Storage> {
     public:
         int id;
         std::string name;
@@ -21,6 +21,8 @@ class Storage {
         void add_products(size_t nr, StoragedProduct pr[]);
 
         bool sell(int id, int quantity);
+        std::string toJson() override;
+        void fromJson(const std::string& string)override;
         
 
 };

@@ -14,6 +14,9 @@ FetchContent_Declare(
 # Previene problemas de compatibilidad en Windows con el runtime de C
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
+# ---- JSON ----
+FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz)
+FetchContent_MakeAvailable(json)
 
 # --- Subdirectorios ---
 add_subdirectory(src)

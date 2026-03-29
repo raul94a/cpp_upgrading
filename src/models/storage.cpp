@@ -2,7 +2,8 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
 
 Storage::Storage(){}
 Storage::Storage(int id, std::string name, std::string city){
@@ -46,3 +47,42 @@ bool Storage::sell(int id, int quantity){
     }
     return false;
 }
+
+//  int id;
+//         std::string name;
+//         std::string city;
+//         std::vector<StoragedProduct> products;
+void Storage::fromJson(const std::string& string) {
+    json data = json::parse(string);
+    this->id = data["id"];
+    this->name = data["name"];
+    this->city = data["city"];
+    this->products.clear();
+    std::vector<StoragedProduct> prs;
+    json products = data["products"];
+    for(auto& el : products){
+        StoragedProduct pr;
+        pr.fromJson(el.dump());
+        this->products.push_back(pr);
+    }
+}
+
+std::string Storage::toJson() {
+    
+    json j_products = json::array();
+    
+    for (auto& pr : this->products) {
+        j_products.push_back(json::parse(pr.toJson()));
+    }
+
+    json j_object = {
+        {"id", this->id},
+        {"name", this->name},
+        {"city", this->city},
+        {"products", j_products} 
+    };
+    
+    return j_object.dump();
+}
+
+template class JsonSerializer<Storage>;

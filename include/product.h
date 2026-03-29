@@ -1,6 +1,7 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
+#include "serializer.h"
 #include <string>
 
 class Product {
@@ -11,11 +12,11 @@ class Product {
 
         Product();
         Product(int id, std::string name, double price);
-        ~Product();
+        virtual ~Product() = default;
 
 };
 
-class StoragedProduct : public Product {
+class StoragedProduct : public Product, JsonSerializer<StoragedProduct>{
     public:
         int quantity;
 
@@ -28,6 +29,8 @@ class StoragedProduct : public Product {
         bool retire(int qty);
         void add(int qty);
         void update(StoragedProduct *product);
+        std::string toJson() override;
+        void fromJson(const std::string& string)override;
 
     
 };

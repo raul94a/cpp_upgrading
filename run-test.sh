@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ rm -rf build
 # 1. Configurar: Definimos origen (-S) y destino (-B) de forma explícita
 cmake -S . -B build
 
@@ -7,4 +7,4 @@ cmake -S . -B build
 cmake --build build
 
 # 3. Testear: Usamos --test-dir para no tener que andar entrando y saliendo de carpetas
-ctest --test-dir build --verbose
+ctest --test-dir build --verbose --debug

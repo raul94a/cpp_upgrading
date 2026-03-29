@@ -1,5 +1,11 @@
 # Creamos el ejecutable de los tests
-add_executable(UnitTests test_test.cpp models/test_storaged_product.cpp models/test_storage.cpp)
+add_executable(UnitTests 
+                controller/test_controller.cpp
+                json/test_janson.cpp
+                models/test_storaged_product.cpp 
+                models/test_storage.cpp 
+                persistence/test_file_persister.cpp
+            )
 
 # Enlazamos con:
 # 1. GTest::gtest_main (provee el main() de los tests automáticamente)
