@@ -7,8 +7,8 @@ class Persister {
     public:
         Persister();
         ~Persister();
-        void write(std::string uri,std::string content);
-        void read(std::string uri);
+        virtual void write(std::string uri,std::string content) = 0;
+        virtual void read(std::string uri) = 0;
 };
 
 class FilePersister : public Persister {
