@@ -7,4 +7,4 @@ cmake -S . -B build
 cmake --build build
 
 # 3. Testear: Usamos --test-dir para no tener que andar entrando y saliendo de carpetas
-ctest --test-dir build --verbose
+ctest --test-dir build --verbose --debug

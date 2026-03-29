@@ -12,7 +12,7 @@ class Product {
 
         Product();
         Product(int id, std::string name, double price);
-        ~Product();
+        virtual ~Product() = default;
 
 };
 

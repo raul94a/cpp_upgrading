@@ -4,7 +4,7 @@
 
 Persister::Persister(){}
 Persister::~Persister(){}
-void Persister::read(std::string uri){}
+std::string Persister::read(std::string uri){}
 void Persister::write(std::string uri,std::string content){}
 
 
@@ -15,20 +15,29 @@ FilePersister::~FilePersister(){
 
 }
 
-void FilePersister::read(std::string uri) {
-    std::cout << "FilePersister read() llamado para: " << uri << std::endl;
+std::string FilePersister::read(std::string uri) {
+  std::cout << "FilePersister read() llamado para: " << uri << std::endl;
     
-    std::ifstream myfile(uri); // Abrir directamente en el constructor es más limpio
-    
+    std::ifstream myfile(uri);
+    std::string summary = "";
+
     if (myfile.is_open()) {
         std::string line;
+        // Reservar espacio si el archivo es grande para evitar reasignaciones costosas
+        // summary.reserve(1000); 
+
         while (getline(myfile, line)) {
-            std::cout << line << '\n';
+            summary += line + "\n"; 
         }
         myfile.close();
+        
+        // Si quieres ver el resultado final, imprímelo UNA SOLA VEZ fuera del bucle
+        std::cout << "[ DEBUG ] Lectura finalizada. Tamaño: " << summary.size() << " bytes." << std::endl;
+
     } else {
         std::cerr << "FilePersister::Read() No se pudo abrir el archivo '" << uri << "'" << std::endl;
     }
+    return summary;
 }
 
 /**

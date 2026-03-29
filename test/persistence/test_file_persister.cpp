@@ -19,7 +19,11 @@ TEST(Persister, ReadsFile) {
 
     // 4. Ejecución
     // Si tu método read no devuelve nada (void), al menos probamos que no crashea
+
     EXPECT_NO_THROW(pr.read(filename));
+
+    std::string summ = pr.read(filename);
+    ASSERT_GT(summ.length(), 10);
 }
 
 TEST(Persister, WritesFile) {
