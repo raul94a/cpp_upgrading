@@ -40,3 +40,33 @@ TEST(StorageControllerTest, WriteToLocalFile) {
     }
 
 }
+
+TEST(StorageControllerTest, FindStorageById) {
+    FilePersister persister;
+    StorageController cntr(persister);    
+    StoragedProduct product(1, "Camiseta de rayas", 99.99, 1);
+    Storage st(1, "Almacenes Llorones", "Martos");
+    st.add_product(&product);
+    cntr.add_storage(st);
+    cntr.save_storages();
+    Storage stt(20, "Almacenes Lloro", "Madrid");
+    StoragedProduct productt(20, "Camiseta azul", 99, 1);
+    stt.add_product(&product);
+    stt.add_product(&productt);
+    cntr.add_storage(stt);
+    cntr.save_storages();
+
+    StorageController cntr2(persister); 
+    std::vector<Storage> loaded_storages = cntr2.read_storages();
+
+    int storage_id = 1;
+
+    Storage* storage = cntr2.get_storage(storage_id);
+    EXPECT_EQ(storage->city,"Martos");
+
+    int storage_idd = 20;
+
+    Storage* storagee = cntr2.get_storage(storage_idd);
+    EXPECT_EQ(storagee->city,"Madrid");
+
+}

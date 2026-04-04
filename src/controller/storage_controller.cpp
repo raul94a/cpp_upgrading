@@ -18,9 +18,17 @@ std::vector<Storage> controller::StorageController::get_all() {
     return this->storages;
 }
 
-// TODO: IMPLEMENT
-Storage controller::StorageController::get_storage(int id) {
-    return Storage(); 
+Storage* controller::StorageController::get_storage(int id) {
+    std::vector<Storage>& list = this->storages;
+    for(Storage& storage: list)
+    {
+        if (storage.id == id)
+        {
+            return &storage;
+        }
+        
+    }
+    return nullptr;
 }
 
 

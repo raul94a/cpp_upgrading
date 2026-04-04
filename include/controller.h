@@ -16,7 +16,7 @@
                 StorageController(FilePersister persist);
                 ~StorageController();
                 std::vector<Storage> get_all();
-                Storage get_storage(int id);
+                Storage* get_storage(int id);
                 void add_storage(Storage pr);
                 void save_storages();
                 std::vector<Storage> read_storages();
