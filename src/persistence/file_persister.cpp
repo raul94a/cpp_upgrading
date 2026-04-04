@@ -4,8 +4,12 @@
 
 Persister::Persister(){}
 Persister::~Persister(){}
-std::string Persister::read(std::string uri){}
-void Persister::write(std::string uri,std::string content){}
+std::string Persister::read(std::string uri){
+    return "";
+}
+void Persister::write(std::string uri,std::string content){
+    return;
+}
 
 
 FilePersister::FilePersister(){
