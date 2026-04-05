@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
+#include <iostream>
 using json = nlohmann::json;
 
 Storage::Storage(){}
@@ -16,6 +17,12 @@ Storage::~Storage(){
 }
 
 void Storage::add_product(StoragedProduct* p){
+    for (auto& pr : this->products){
+        if(pr.id == p->id){
+            std::cout << "[Warning] No se ha podido añadir el producto con id " << p->id <<std::endl;
+            return;
+        }
+    }
     this->products.push_back(*p);
 }
 void Storage::add_products(size_t nr, StoragedProduct pr[]){

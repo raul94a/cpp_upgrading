@@ -35,8 +35,9 @@ TEST(Storage, SetArguments) {
 TEST(Storage,Sell) {
    Storage st = _create_storage(20);
    StoragedProduct* pr = _create_product(1,20);
-
+   StoragedProduct* pr2 = _create_product(1,22);
    st.add_product(pr);
+   st.add_product(pr2);
   // delete pr;
    EXPECT_EQ(st.products.size(), 1);
 
