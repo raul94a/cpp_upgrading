@@ -1,9 +1,11 @@
 #include <string>
 #include <iostream>
+#include "view.h"
+#include "controller.h"
 #include "product.h"
 using namespace std;
 int main(){
-
+    /*
     string str = "ejemplo";
     string sub = "empl";
     int index = str.find(sub,0);
@@ -43,7 +45,10 @@ int main(){
         cout << "out of range exception: finishing program\n" << M.what() << endl;
         return 1;
     }
-    cout << "Finish search\n"<<endl;
+    cout << "Finish search\n"<<endl;*/
+    // it reads the data.json file to get the objects when instanciate
+    controller::StorageController controller = controller::StorageController(FilePersister());
+    view(&controller);
 
 
     return 0;

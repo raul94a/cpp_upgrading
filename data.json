@@ -1,1 +1,15 @@
-[{"city":"Martos","id":1,"name":"Almacenes Llorones","products":[{"id":1,"name":"Camiseta de rayas","price":99.99,"quantity":1}]}]
+[
+    {
+        "city": "Martos",
+        "id": 1,
+        "name": "Almacén Los Garrulos",
+        "products": [
+            {
+                "id": 888,
+                "name": "GarroteVil",
+                "price": 88.99,
+                "quantity": 9999
+            }
+        ]
+    }
+]

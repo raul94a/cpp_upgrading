@@ -6,6 +6,7 @@ using json = nlohmann::json;
 
 controller::StorageController::StorageController(FilePersister persister){
     this->persist = persister;
+    this->read_storages();
 }
 
 controller::StorageController::~StorageController(){
